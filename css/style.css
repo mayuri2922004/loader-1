@@ -1,0 +1,132 @@
+/* From Uiverse.io by PriyanshuGupta28 */ 
+body{
+    background-color:black; 
+    margin: 0;
+}
+
+
+.loader {
+    display: flex;
+    margin-top: 20%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    transform-style: preserve-3d;
+    animation: spin 2s infinite linear;
+  }
+  
+  .side {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+  }
+  
+  .front {
+    transform: translateZ(50px);
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+  }
+  
+  .back {
+    transform: translateZ(-50px);
+    background: linear-gradient(45deg, #40e0d0, #ff8c00);
+  }
+  
+  .top {
+    transform: rotateX(90deg) translateZ(50px);
+    background: linear-gradient(45deg, #800080, #00bfff);
+  }
+  
+  .bottom {
+    transform: rotateX(90deg) translateZ(-50px);
+    background: linear-gradient(45deg, #008000, #ffff00);
+  }
+  
+  .left {
+    transform: rotateY(90deg) translateZ(50px);
+    background: linear-gradient(45deg, #0000ff, #ff1493);
+  }
+  
+  .right {
+    transform: rotateY(90deg) translateZ(-50px);
+    background: linear-gradient(45deg, #00ffff, #ff0000);
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+  
+    100% {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .loader {
+      margin-top: 80%;
+    }
+  }
+
+  .para{
+    color: #800080;
+    text-align:top;
+    font-size: 18px;
+    display: none;
+
+  }
+
+  #popup {
+        
+    position:fixed;
+    top: 35px;
+    left: 35px;
+    background-color:rgb(255, 0, 0);
+    align-items: center;
+    display: block;
+    justify-content: center;
+  }
+
+  .popup-box{
+    background-color: white;
+    padding: 25px;
+    display: none;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  }
+
+  .popup-box h2{
+    margin-bottom: 15px;
+    color: #ff4e50;
+  }
+
+  .popup-box input{
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+  }
+
+  .popup-box button{
+    padding: 60px,10px;
+
+  }
+
+  #close-btn{
+    position: absolute;
+    top:2px;
+    right:9px;
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+  }
+.blur{
+    filter: blur(2px);
+}
